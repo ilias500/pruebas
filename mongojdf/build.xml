@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="crm-rc2" default="deploy" basedir=".">
+
+  <tstamp/>
+  <property name="bak"          value="../../backups"/>
+  <property name="project.name" value="mongojdf"/>
+  <property name="jboss.home" value="d:/javasrv/jboss-as-7.1.1.Final"/>
+
+  <target name="bak">
+    <delete dir="target" failonerror="no"/>
+    <mkdir dir="${bak}/${project.name}" />
+    <jar jarfile="${bak}/${project.name}/${DSTAMP}-${TSTAMP}-${project.name}.zip" basedir="."/>
+  </target>
+
+  <target name="ok">
+    <mkdir dir="${bak}/${project.name}" />
+    <delete dir="target" failonerror="no"/>
+    <jar jarfile="${bak}/${project.name}/ok-${DSTAMP}-${TSTAMP}-${project.name}.zip" basedir="."/>
+  </target>
+
+  <target name="del1" description="Initialize the build">
+    <delete dir="${jboss.home}" failonerror="no"/>
+  </target>
+
+  <target name="del" depends="del1" description="Initialize the build">
+    <mkdir dir="${jboss.home}" />
+    <copy todir="${jboss.home}">
+      <fileset dir="${jboss.home} - copia" />
+    </copy>
+  </target>
+
+</project>
