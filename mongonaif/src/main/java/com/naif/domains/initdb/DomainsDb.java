@@ -1,4 +1,4 @@
-package com.naif.domains.helper;
+package com.naif.domains.initdb;
 
 import com.naif.domains.models.SystemsModels;
 import com.naif.domains.models.Domains;
@@ -18,14 +18,14 @@ import org.jboss.logging.Logger;
  */
 @Singleton
 @LocalBean
-@Named("simadbbean")
-public class SimaDbBean {
+@Named("domainsdb")
+public class DomainsDb {
 
-    @PersistenceContext(unitName = "SIMA_PU")
+    @PersistenceContext(unitName = "NAIF_PU")
     private EntityManager em;
-    private static final Logger log = Logger.getLogger(SimaDbBean.class.getName());
+    private static final Logger log = Logger.getLogger(DomainsDb.class.getName());
 
-    public void populateShop() {
+    public void init() {
 
         log.info("Please wait while preparing database data ... ");
 

@@ -3,7 +3,7 @@
 
   <tstamp/>
   <property name="bak"          value="../../backups/pruebas"/>
-  <property name="project.name" value="mongojdf"/>
+  <property name="project.name" value="mongonaif"/>
   <property name="jboss.home" value="d:/javasrv/jboss-as-7.1.1.Final"/>
 
   <target name="bak">

@@ -23,6 +23,12 @@
   </dependencyManagement>
 
   <dependencies>
+  
+    <dependency>
+      <groupId>com.naif.domains</groupId>
+      <artifactId>naifdb</artifactId>
+      <version>1.0.0-cr</version>
+    </dependency>
 
     <dependency>
       <groupId>org.hibernate.ogm</groupId>
@@ -106,7 +112,7 @@
   </repositories>
 
   <build>
-    <finalName>mongojdf</finalName>
+    <finalName>mongonaif</finalName>
     <plugins>
 
       <plugin>
