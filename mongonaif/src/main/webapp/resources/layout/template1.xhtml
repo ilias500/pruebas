@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+   <script src="resource/js/js.js"/>
+   <link rel="stylesheet" href="./resource/css/generic.css"/>
+   <style>
+     .ui-panelgrid td {
+       vertical-align: top;
+     }
+
+     .ui-datatable .ui-datatable-data td, .ui-datatable .ui-datatable-data-empty td {
+                border-style:hidden;
+     }
+   </style>
+   <title>NAIF</title>
+</h:head>
+
+<h:body>
+  <p:layout fullPage="true">
+
+    <p:layoutUnit position="center" resizable="false">
+    
+      <p:panel style="margin-bottom: 10px;">
+        <h:panelGrid columns="2" width="100%" border="0">
+
+          <h:panelGrid columns="2" width="100%" border="0">
+                 <ui:insert name="header" />
+          </h:panelGrid>
+
+          <h:panelGrid columns="2" width="100%" border="0" style="text-align:right;">
+                 <ui:insert name="subheader" />
+          </h:panelGrid>
+
+        </h:panelGrid>
+      </p:panel>
+
+      <p:panelGrid columns="2" style="width:100%; vertical-align:top; text-align: center;">
+
+        <p:panel>
+          <ui:insert name="left" />
+        </p:panel>
+
+        <p:panel id="revisarproductsTableId">
+          <ui:insert name="main" />
+        </p:panel>
+
+      </p:panelGrid>
+
+    </p:layoutUnit>
+
+  </p:layout>
+</h:body>
+</html>
