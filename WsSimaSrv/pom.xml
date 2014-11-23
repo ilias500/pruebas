@@ -9,7 +9,7 @@
 
   <!-- java -jar target/WsSimaSrv-1.0.0-beta.jar -->
   <!-- http://localhost:8080/ -->
-  <!-- http://localhost:8080/WsSimaCli-1.0.0-beta/UnWebService?wsdl -->
+  <!-- http://localhost:8080/WsSimaSrv-1.0.0-beta/UnWebService?wsdl -->
 
   <name>WsServer</name>
   <url>http://maven.apache.org</url>

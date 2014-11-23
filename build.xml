@@ -5,7 +5,7 @@
 
   <property name="jboss.home" value="d:/javasrv/jboss-as-7.1.1.Final"/>
 
-  <target name="git" description="Initialize the build">
+  <target name="del" description="Initialize the build">
     <delete dir="mongojdf/target" failonerror="no"/>
     <delete dir="RafaEShop/target" failonerror="no"/>
     <delete dir="SimpleWebAppEjb/target" failonerror="no"/>
@@ -19,7 +19,7 @@
     <delete dir="${jboss.home}" failonerror="no"/>
   </target>
 
-  <target name="del" depends="del1" description="Initialize the build">
+  <target name="srv" depends="del1" description="Initialize the build">
     <mkdir dir="${jboss.home}" />
     <copy todir="${jboss.home}">
       <fileset dir="${jboss.home} - copia" />

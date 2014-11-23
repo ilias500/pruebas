@@ -8,7 +8,7 @@ public class UnWebService {
    @WebMethod
    public String codigo(String documento) {
       String codigo;
-      codigo = "215001";
+      codigo = documento+"-5";
       return codigo;
    }
 }

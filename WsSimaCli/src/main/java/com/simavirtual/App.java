@@ -19,7 +19,7 @@ public class App{
       // Obtencion del cliente
 
       UnWebServiceService unWebServiceService = new UnWebServiceService(
-            new URL("http://localhost:8080/WsSimaCli-1.0.0-beta/UnWebService?wsdl"),    // URL real del web service.
+            new URL("http://192.168.0.15:8080/WsSimaSrv-1.0.0-beta/UnWebService?wsdl"),    // URL real del web service.
             new QName("http://ws.simavirtual.com/",           // copiado del código generado por wsimport
                   "UnWebServiceService"));
 
