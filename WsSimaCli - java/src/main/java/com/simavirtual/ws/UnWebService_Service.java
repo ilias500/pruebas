@@ -17,48 +17,48 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "UnWebServiceService", targetNamespace = "http://ws.simavirtual.com/", wsdlLocation = "file:/d:/dev/njava/pruebas/WsSimaCli/src/main/wsdl/UnWebServiceService.wsdl")
-public class UnWebServiceService
+@WebServiceClient(name = "UnWebService", targetNamespace = "http://ws.simavirtual.com/", wsdlLocation = "file:/d:/dev/njava/pruebas/WsSimaCli/src/main/wsdl/UnWebService.wsdl")
+public class UnWebService_Service
     extends Service
 {
 
-    private final static URL UNWEBSERVICESERVICE_WSDL_LOCATION;
-    private final static WebServiceException UNWEBSERVICESERVICE_EXCEPTION;
-    private final static QName UNWEBSERVICESERVICE_QNAME = new QName("http://ws.simavirtual.com/", "UnWebServiceService");
+    private final static URL UNWEBSERVICE_WSDL_LOCATION;
+    private final static WebServiceException UNWEBSERVICE_EXCEPTION;
+    private final static QName UNWEBSERVICE_QNAME = new QName("http://ws.simavirtual.com/", "UnWebService");
 
     static {
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/d:/dev/njava/pruebas/WsSimaCli/src/main/wsdl/UnWebServiceService.wsdl");
+            url = new URL("file:/d:/dev/njava/pruebas/WsSimaCli/src/main/wsdl/UnWebService.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
-        UNWEBSERVICESERVICE_WSDL_LOCATION = url;
-        UNWEBSERVICESERVICE_EXCEPTION = e;
+        UNWEBSERVICE_WSDL_LOCATION = url;
+        UNWEBSERVICE_EXCEPTION = e;
     }
 
-    public UnWebServiceService() {
-        super(__getWsdlLocation(), UNWEBSERVICESERVICE_QNAME);
+    public UnWebService_Service() {
+        super(__getWsdlLocation(), UNWEBSERVICE_QNAME);
     }
 
-    public UnWebServiceService(WebServiceFeature... features) {
-        super(__getWsdlLocation(), UNWEBSERVICESERVICE_QNAME, features);
+    public UnWebService_Service(WebServiceFeature... features) {
+        super(__getWsdlLocation(), UNWEBSERVICE_QNAME, features);
     }
 
-    public UnWebServiceService(URL wsdlLocation) {
-        super(wsdlLocation, UNWEBSERVICESERVICE_QNAME);
+    public UnWebService_Service(URL wsdlLocation) {
+        super(wsdlLocation, UNWEBSERVICE_QNAME);
     }
 
-    public UnWebServiceService(URL wsdlLocation, WebServiceFeature... features) {
-        super(wsdlLocation, UNWEBSERVICESERVICE_QNAME, features);
+    public UnWebService_Service(URL wsdlLocation, WebServiceFeature... features) {
+        super(wsdlLocation, UNWEBSERVICE_QNAME, features);
     }
 
-    public UnWebServiceService(URL wsdlLocation, QName serviceName) {
+    public UnWebService_Service(URL wsdlLocation, QName serviceName) {
         super(wsdlLocation, serviceName);
     }
 
-    public UnWebServiceService(URL wsdlLocation, QName serviceName, WebServiceFeature... features) {
+    public UnWebService_Service(URL wsdlLocation, QName serviceName, WebServiceFeature... features) {
         super(wsdlLocation, serviceName, features);
     }
 
@@ -85,10 +85,10 @@ public class UnWebServiceService
     }
 
     private static URL __getWsdlLocation() {
-        if (UNWEBSERVICESERVICE_EXCEPTION!= null) {
-            throw UNWEBSERVICESERVICE_EXCEPTION;
+        if (UNWEBSERVICE_EXCEPTION!= null) {
+            throw UNWEBSERVICE_EXCEPTION;
         }
-        return UNWEBSERVICESERVICE_WSDL_LOCATION;
+        return UNWEBSERVICE_WSDL_LOCATION;
     }
 
 }

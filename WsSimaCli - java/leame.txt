@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=com.simavirtual -DartifactId=WsSimaSrv -DarchetypeArtifactId=maven-archetype-webapp

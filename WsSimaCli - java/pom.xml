@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.simavirtual</groupId>
+  <artifactId>WsSimaCli</artifactId>
+  <version>1.0.0-beta</version>
+  <packaging>jar</packaging>
+
+  <!-- java -jar target/WsSimaCli-1.0.0-beta.jar -->
+
+  <name>WsSimaCli</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-rt</artifactId>
+      <version>2.2.5</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+<dependency>
+    <groupId>org.jconfig</groupId>
+    <artifactId>jconfig</artifactId>
+    <version>2.9</version>
+    <exclusions>
+        <exclusion>
+            <groupId>com.sun.jmx</groupId>
+            <artifactId>jmxri</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>javax.xml.parsers</groupId>
+            <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>crimson</groupId>
+            <artifactId>crimson</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+  </dependencies>
+
+<build>
+      <plugins>
+         <plugin>
+            <groupId>org.jvnet.jax-ws-commons</groupId>
+            <artifactId>jaxws-maven-plugin</artifactId>
+            <version>2.2</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>wsimport</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+              <keep>true</keep>
+              <verbose>true</verbose>
+              <wsdlDirectory>${basedir}/src/main/wsdl/</wsdlDirectory>
+              <sourceDestDir>src/main/java</sourceDestDir>
+            </configuration>
+         </plugin>
+
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>2.4</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>com.simavirtual.App</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+   </plugin>
+
+      </plugins>
+</build>
+
+</project>
+
+
+
+

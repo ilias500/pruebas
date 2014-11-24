@@ -18,26 +18,11 @@ public class App{
     public static void main( String[] args ) throws MalformedURLException{
 
       // Obtencion del cliente
-
-      UnWebService_Service unWebServiceService = new UnWebService_Service(
-            new URL("http://nafg:8080/WsSimaSrv/UnWebService?wsdl"),    // URL real del web service.
-            new QName("http://ws.simavirtual.com/",           // copiado del código generado por wsimport
-                  "UnWebServiceService"));
-
-
-/*
-
-      UnWebService_Service unWebServiceService = new UnWebService_Service(
-            new URL("http://nafg:8080/WsSimaSrv/UnWebService?wsdl"),    // URL real del web service.
-            new QName("http://ws.simavirtual.com/",           // copiado del código generado por wsimport
-                  "UnWebServiceService"));
-
+      
       UnWebService_Service unWebServiceService = new UnWebService_Service(
             new URL("http://192.168.0.15:8080/WsSimaSvr/UnWebService?wdsl"),    // URL real del web service.
             new QName("http://ws.simavirtual.com/",           // copiado del código generado por wsimport
                   "UnWebServiceService"));
-*/
-
 
       UnWebService unWebService = unWebServiceService.getUnWebServicePort();
 
