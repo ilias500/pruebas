@@ -14,6 +14,7 @@
     <delete dir="WsSimaSrv/target" failonerror="no"/>
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
+    <delete dir="SimpleWeb/target" failonerror="no"/>
   </target>
 
   <target name="del1" description="Initialize the build">
