@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <project name="naif" default="git" basedir=".">
 
+  <!-- git clone https://github.com/nelsonjava/pruebas.git -->
+
   <tstamp/>
 
   <property name="jboss.home" value="d:/javasrv/jboss-as-7.1.1.Final"/>
@@ -15,6 +17,7 @@
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
     <delete dir="SimpleWeb/target" failonerror="no"/>
+    <delete dir="myapp/target" failonerror="no"/>
   </target>
 
   <target name="del1" description="Initialize the build">
