@@ -8,16 +8,17 @@
   <property name="jboss.home" value="d:/javasrv/jboss-as-7.1.1.Final"/>
 
   <target name="del" description="Initialize the build">
+    <delete dir="mongoApp/target" failonerror="no"/>  
     <delete dir="mongojdf/target" failonerror="no"/>
-    <delete dir="RafaEShop/target" failonerror="no"/>
-    <delete dir="SimpleWebAppEjb/target" failonerror="no"/>
     <delete dir="mongonaif/target" failonerror="no"/>
     <delete dir="mongospark/target" failonerror="no"/>
-    <delete dir="WsSimaSrv/target" failonerror="no"/>
-    <delete dir="WsSimaCli/target" failonerror="no"/>
-    <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
-    <delete dir="SimpleWeb/target" failonerror="no"/>
     <delete dir="myapp/target" failonerror="no"/>
+    <delete dir="RafaEShop/target" failonerror="no"/>
+    <delete dir="SimpleWeb/target" failonerror="no"/>
+    <delete dir="SimpleWebAppEjb/target" failonerror="no"/>
+    <delete dir="WsSimaCli/target" failonerror="no"/>
+    <delete dir="WsSimaSrv/target" failonerror="no"/>
+    <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
   </target>
 
   <target name="del1" description="Initialize the build">
