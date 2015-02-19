@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
-<project name="naif" default="git" basedir=".">
 
-  <!-- git clone https://github.com/nelsonjava/pruebas.git -->
+<!-- http://ebook.online-convert.com/es/convertir-a-epub -->
+<!-- git clone https://github.com/nelsonjava/pruebas.git -->
+
+<project name="naif" default="bak" basedir=".">
 
   <tstamp/>
-
-  <property name="jboss.home" value="d:/javasrv/jboss-as-7.1.1.Final"/>
+  <property name="bak"          value="../../backups/dev"/>
+  <property name="project.name" value="pruebas"/>
 
   <target name="del" description="Initialize the build">
-    <delete dir="mongoApp/target" failonerror="no"/>  
+    <delete dir="mongoApp/target" failonerror="no"/>
     <delete dir="mongojdf/target" failonerror="no"/>
     <delete dir="mongonaif/target" failonerror="no"/>
     <delete dir="mongospark/target" failonerror="no"/>
@@ -19,17 +21,19 @@
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSrv/target" failonerror="no"/>
     <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
+    <delete dir="appH2/target" failonerror="no"/>    
+  </target>
+  
+  <target name="bak">
+    <delete dir="target" failonerror="no"/>
+    <mkdir dir="${bak}/${project.name}" />
+    <jar jarfile="${bak}/${project.name}/${DSTAMP}-${TSTAMP}-${project.name}.zip" basedir="."/>
   </target>
 
-  <target name="del1" description="Initialize the build">
-    <delete dir="${jboss.home}" failonerror="no"/>
-  </target>
-
-  <target name="srv" depends="del1" description="Initialize the build">
-    <mkdir dir="${jboss.home}" />
-    <copy todir="${jboss.home}">
-      <fileset dir="${jboss.home} - copia" />
-    </copy>
+  <target name="ok">
+    <mkdir dir="${bak}/${project.name}" />
+    <delete dir="target" failonerror="no"/>
+    <jar jarfile="${bak}/${project.name}/ok-${DSTAMP}-${TSTAMP}-${project.name}.zip" basedir="."/>
   </target>
 
 </project>
