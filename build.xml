@@ -21,7 +21,8 @@
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSrv/target" failonerror="no"/>
     <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
-    <delete dir="appH2/target" failonerror="no"/>    
+    <delete dir="appH2/target" failonerror="no"/>
+    <delete dir="appHsqldb/target" failonerror="no"/>    
   </target>
   
   <target name="bak">

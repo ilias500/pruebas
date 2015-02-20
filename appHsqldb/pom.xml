@@ -2,8 +2,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <!-- java -jar target/appH2-1.0-SNAPSHOT.jar -->
-  <!-- java -jar target/appH2-1.0-SNAPSHOT-jar-with-dependencies.jar  -->
+  <!-- java -jar target/appHsqldb-1.0-SNAPSHOT.jar -->
+  <!-- java -jar target/appHsqldb-1.0-SNAPSHOT-jar-with-dependencies.jar  -->
   <!-- mvn clean compile assembly:single -->
 
   <!-- 1. Maven add classpath to manifest -->
@@ -12,18 +12,13 @@
   <!-- 4. maven add dependencies to jar -->
   <!-- http://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven  -->
 
-  <!-- RECURSOS -->
-  <!-- http://hsqldb.org/  -->
-  <!-- http://geowarin.github.io/2013/01/20/using-hibernate-as-a-jpa-provider-in-a-java-se-environment-and-run-tests-with-dbunit/   -->
-  <!-- https://github.com/geowarin/hibernate-examples  -->
-
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.simavirtual</groupId>
-  <artifactId>appH2</artifactId>
+  <groupId>com.geowarin.hibernate.jpa.standalone</groupId>
+  <artifactId>appHsqldb</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>appH2</name>
+  <name>appHsqldb</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
@@ -34,12 +29,34 @@
       <version>1.0-SNAPSHOT</version>
     </dependency>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.1.5.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.2.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>2.4.9</version>
+		</dependency>
 
   </dependencies>
 
@@ -61,7 +78,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.simavirtual.App</mainClass>
+              <mainClass>com.geowarin.hibernate.jpa.standalone.App</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -72,7 +89,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.simavirtual.App</mainClass>
+              <mainClass>com.geowarin.hibernate.jpa.standalone.App</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
