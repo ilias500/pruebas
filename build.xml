@@ -29,6 +29,8 @@
     <delete dir="appAjuste/hola" failonerror="no"/>
     <delete dir="appMongoPrueba/target" failonerror="no"/>
     <delete dir="appMongoPrueba/ObjectStore" failonerror="no"/>
+    <delete dir="appConta/target" failonerror="no"/>
+    <delete dir="appConta/ObjectStore" failonerror="no"/>
   </target>
 
   <target name="bak">
