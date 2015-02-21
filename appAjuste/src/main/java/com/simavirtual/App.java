@@ -24,7 +24,11 @@ public class App{
        while (otra.hasMoreElements()) {
 
          java.util.jar.JarEntry sfile = (java.util.jar.JarEntry) otra.nextElement();
+
+System.out.println( "sfile ="+sfile );
+
          java.io.File ff  = new java.io.File(directory + sfile.getName());
+
          java.io.File fff = new java.io.File(directory + farchivo );
 
          if (ff.getName().equals(farchivo)){
