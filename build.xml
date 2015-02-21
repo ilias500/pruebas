@@ -25,6 +25,8 @@
     <delete dir="appHsqldb/target" failonerror="no"/>
     <delete dir="appMongoOk/target" failonerror="no"/>
     <delete dir="appMongoOk/ObjectStore" failonerror="no"/>
+    <delete dir="appAjuste/target" failonerror="no"/>
+    <delete dir="appAjuste/hola" failonerror="no"/>    
   </target>
 
   <target name="bak">
