@@ -58,7 +58,7 @@ System.out.println( "sfile ="+sfile );
 
         Utils.fileJar("logo.jpg","hola\\src\\main\\resources\\",fileJar);
 
-        fileJarPrueba("poma.xml","hola\\src\\main\\resources\\",fileJar);
+        fileJarPrueba("pom.xml","hola\\src\\main\\resources\\",fileJar);
 
 
 
