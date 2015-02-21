@@ -11,7 +11,7 @@
 
 		<properties>
 			<property name="hibernate.ogm.datastore.provider" value="mongodb" />
-			<property name="hibernate.ogm.datastore.database" value="conta" />
+			<property name="hibernate.ogm.datastore.database" value="conta1" />
 			<property name="hibernate.ogm.datastore.create_database" value="true" />
 		</properties>
 	</persistence-unit>

@@ -21,12 +21,20 @@ public class App{
 
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
-
-            Pucs p = new Pucs("Cuentas x Cobrar");
+            
+            Person p = new Person("Nelson","Fernandez");
 
             em.persist(p);
             em.getTransaction().commit();
             em.close();
+
+
+
+/*
+            Pucs pucs = new Pucs("Cuentas x Cobrar");
+            em.persist(pucs);
+*/
+
 
             emf.close();
 

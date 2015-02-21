@@ -6,6 +6,7 @@ import java.util.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Pucs {
@@ -13,8 +14,9 @@ public class Pucs {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE)
-    private long id;
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
 
     private Integer optlock;
 
@@ -28,35 +30,27 @@ public class Pucs {
 
     private String observaciones;
 
-    private Set<Saldos> saldos = new HashSet<Saldos>();
-
     private Set<Pucs> objHijos = new HashSet<Pucs>();
-
-    private Set<Movimientos> movimientos = new HashSet<Movimientos>();
 
     private Pucs objPadre;
 
+    private Set<Movimientos> movimientos = new HashSet<Movimientos>();
+
+    private Set<Saldos> saldos = new HashSet<Saldos>();
+
     public Pucs() {
     }
-    
+
     public Pucs(String nombre) {
         this.nombre = nombre;
     }
 
-    public Pucs(String nombre,boolean siRegistra,boolean siTercero,boolean siBase,String observaciones) {
-        this.nombre = nombre;
-        this.siRegistra = siRegistra;
-        this.siTercero = siTercero;
-        this.siBase = siBase;
-        this.observaciones = observaciones;
-    }
-
     @Id
-    public long getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -96,19 +90,19 @@ public class Pucs {
     }
 
     @OneToMany
-    public Set<Saldos> getSaldos() {
-        return saldos;
-    }
-    public void setSaldos(Set<Saldos> saldos) {
-        this.saldos = saldos;
-    }
-
-    @OneToMany
     public Set<Pucs> getObjHijos() {
         return this.objHijos;
     }
     public void setObjHijos(Set<Pucs> objHijos) {
         this.objHijos = objHijos;
+    }
+
+    @ManyToOne
+    public Pucs getObjPadre() {
+        return this.objPadre;
+    }
+    public void setObjPadre(Pucs objPadre) {
+        this.objPadre = objPadre;
     }
 
     @OneToMany
@@ -119,12 +113,12 @@ public class Pucs {
         this.movimientos = movimientos;
     }
 
-    @ManyToOne
-    public Pucs getObjPadre() {
-        return this.objPadre;
+    @OneToMany
+    public Set<Saldos> getSaldos() {
+        return saldos;
     }
-    public void setObjPadre(Pucs objPadre) {
-        this.objPadre = objPadre;
+    public void setSaldos(Set<Saldos> saldos) {
+        this.saldos = saldos;
     }
 
 } // entity

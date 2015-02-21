@@ -6,6 +6,7 @@ import java.util.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Terceros {
@@ -13,8 +14,9 @@ public class Terceros {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE)
-    private long id;
+	@GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
 
     private Integer optlock;
 
@@ -44,11 +46,11 @@ public class Terceros {
     }
 
     @Id
-    public long getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

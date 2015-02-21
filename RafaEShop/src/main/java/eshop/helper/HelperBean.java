@@ -33,10 +33,13 @@ public class HelperBean {
 
         Categories category_tops = new Categories();
         category_tops.setCategory("Tops");
+
         Categories category_shoes = new Categories();
         category_shoes.setCategory("Shoes");
+
         Categories category_caps = new Categories();
         category_caps.setCategory("Caps");
+
         Categories category_wristband = new Categories();
         category_wristband.setCategory("Wristbands");
         Categories category_racquets = new Categories();
