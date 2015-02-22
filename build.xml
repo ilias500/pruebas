@@ -10,6 +10,16 @@
   <property name="project.name" value="pruebas"/>
 
   <target name="del" description="Initialize the build">
+    <delete dir="appAjuste/target" failonerror="no"/>
+    <delete dir="appAjuste/hola" failonerror="no"/>
+    <delete dir="appConta/target" failonerror="no"/>
+    <delete dir="appConta/ObjectStore" failonerror="no"/>
+    <delete dir="appH2/target" failonerror="no"/>
+    <delete dir="appHsqldb/target" failonerror="no"/>
+    <delete dir="appMongoOk/target" failonerror="no"/>
+    <delete dir="appMongoOk/ObjectStore" failonerror="no"/>
+    <delete dir="appMongoPrueba/target" failonerror="no"/>
+    <delete dir="appMongoPrueba/ObjectStore" failonerror="no"/>
     <delete dir="mongoApp/target" failonerror="no"/>
     <delete dir="mongojdf/target" failonerror="no"/>
     <delete dir="mongonaif/target" failonerror="no"/>
@@ -18,19 +28,10 @@
     <delete dir="RafaEShop/target" failonerror="no"/>
     <delete dir="SimpleWeb/target" failonerror="no"/>
     <delete dir="SimpleWebAppEjb/target" failonerror="no"/>
+    <delete dir="webMongo/target" failonerror="no"/>
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSrv/target" failonerror="no"/>
     <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
-    <delete dir="appH2/target" failonerror="no"/>
-    <delete dir="appHsqldb/target" failonerror="no"/>
-    <delete dir="appMongoOk/target" failonerror="no"/>
-    <delete dir="appMongoOk/ObjectStore" failonerror="no"/>
-    <delete dir="appAjuste/target" failonerror="no"/>
-    <delete dir="appAjuste/hola" failonerror="no"/>
-    <delete dir="appMongoPrueba/target" failonerror="no"/>
-    <delete dir="appMongoPrueba/ObjectStore" failonerror="no"/>
-    <delete dir="appConta/target" failonerror="no"/>
-    <delete dir="appConta/ObjectStore" failonerror="no"/>
   </target>
 
   <target name="bak">

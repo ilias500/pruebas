@@ -4,7 +4,7 @@
  * License: GNU Lesser General Public License (LGPL), version 2.1 or later
  * See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
  */
-package com.simavirtual.models.conta;
+package com.simavirtual;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -41,7 +41,7 @@ public class Person {
 	private String lastName;
 
 	@OneToMany(mappedBy = "organizer", cascade = CascadeType.PERSIST)
-	private Set<Hike> organizedHikes = new HashSet<Hike>();
+	private Set<Hike> organizedHikes = new HashSet<>();
 
 	// constructors, getters and setters...
 

@@ -12,7 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class App {
 
-	//private static Logger log = LoggerFactory.getLogger(App.class);
+    //private static Logger log = LoggerFactory.getLogger(App.class);
 
     public static void main( String[] args ){
 
@@ -20,9 +20,7 @@ public class App {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hikeWithMongo-PU");
 
-
         try {
-            //tm.begin();
 
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();

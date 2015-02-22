@@ -41,8 +41,12 @@ public class Pucs {
     public Pucs() {
     }
 
-    public Pucs(String nombre) {
+    public Pucs(String nombre,boolean siRegistra,boolean siTercero,boolean siBase,String observaciones) {
         this.nombre = nombre;
+        this.siRegistra = siRegistra;
+        this.siTercero = siTercero;
+        this.siBase = siBase;
+        this.observaciones = observaciones;
     }
 
     @Id
