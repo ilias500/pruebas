@@ -20,6 +20,7 @@
     <delete dir="appMongoOk/ObjectStore" failonerror="no"/>
     <delete dir="appMongoPrueba/target" failonerror="no"/>
     <delete dir="appMongoPrueba/ObjectStore" failonerror="no"/>
+    <delete dir="kitchensink/target" failonerror="no"/>
     <delete dir="mongoApp/target" failonerror="no"/>
     <delete dir="mongojdf/target" failonerror="no"/>
     <delete dir="mongonaif/target" failonerror="no"/>
