@@ -1,6 +1,6 @@
 package com.simavirtual.service;
 
-import com.simavirtual.model.Member;
+import com.simavirtual.model.Person;
 
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 // The @Stateless annotation eliminates the need for manual transaction demarcation
 @Stateless
-public class MemberRegistration {
+public class PersonRegistration {
 
     @Inject
     private Logger log;
@@ -19,11 +19,11 @@ public class MemberRegistration {
     private EntityManager em;
 
     @Inject
-    private Event<Member> memberEventSrc;
+    private Event<Person> personEventSrc;
 
-    public void register(Member member) throws Exception {
-        log.info("Registering " + member.getName());
-        em.persist(member);
-        memberEventSrc.fire(member);
+    public void register(Person person) throws Exception {
+        log.info("Registering " + person.getName());
+        em.persist(person);
+        personEventSrc.fire(person);
     }
 }

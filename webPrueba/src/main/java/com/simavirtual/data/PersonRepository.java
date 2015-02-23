@@ -8,37 +8,37 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
-import com.simavirtual.model.Member;
+import com.simavirtual.model.Person;
 
 @ApplicationScoped
-public class MemberRepository {
+public class PersonRepository {
 
     @Inject
     private EntityManager em;
 
-    public Member findById(Long id) {
-        return em.find(Member.class, id);
+    public Person findById(String id) {
+        return em.find(Person.class, id);
     }
 
-    public Member findByEmail(String email) {
+    public Person findByEmail(String email) {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Member> criteria = cb.createQuery(Member.class);
-        Root<Member> member = criteria.from(Member.class);
+        CriteriaQuery<Person> criteria = cb.createQuery(Person.class);
+        Root<Person> person = criteria.from(Person.class);
         // Swap criteria statements if you would like to try out type-safe criteria queries, a new
         // feature in JPA 2.0
-        // criteria.select(member).where(cb.equal(member.get(Member_.name), email));
-        criteria.select(member).where(cb.equal(member.get("email"), email));
+        // criteria.select(person).where(cb.equal(person.get(Person_.name), email));
+        criteria.select(person).where(cb.equal(person.get("email"), email));
         return em.createQuery(criteria).getSingleResult();
     }
 
-    public List<Member> findAllOrderedByName() {
+    public List<Person> findAllOrderedByName() {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<Member> criteria = cb.createQuery(Member.class);
-        Root<Member> member = criteria.from(Member.class);
+        CriteriaQuery<Person> criteria = cb.createQuery(Person.class);
+        Root<Person> person = criteria.from(person.class);
         // Swap criteria statements if you would like to try out type-safe criteria queries, a new
         // feature in JPA 2.0
-        // criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
-        criteria.select(member).orderBy(cb.asc(member.get("name")));
+        // criteria.select(person).orderBy(cb.asc(person.get(Person_.name)));
+        criteria.select(person).orderBy(cb.asc(person.get("name")));
         return em.createQuery(criteria).getResultList();
     }
 }

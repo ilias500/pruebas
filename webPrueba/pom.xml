@@ -9,6 +9,12 @@
   <!-- http://localhost:8080 -->
   <!-- http://localhost:8080/webPrueba -->
 
+  <!-- Mongo Comands -->
+  <!-- show databases -->
+  <!-- use WebMongoDB -->
+  <!-- show collections -->
+  <!-- db.Person.find().pretty() -->
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.simavirtual</groupId>
   <artifactId>webPrueba</artifactId>

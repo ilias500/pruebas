@@ -8,37 +8,37 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.simavirtual.model.Member;
-import com.simavirtual.service.MemberRegistration;
+import com.simavirtual.model.Person;
+import com.simavirtual.service.PersonRegistration;
 
 // The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
 // EL name
 // Read more about the @Model stereotype in this FAQ:
 // http://www.cdi-spec.org/faq/#accordion6
 @Model
-public class MemberController {
+public class PersonController {
 
     @Inject
     private FacesContext facesContext;
 
     @Inject
-    private MemberRegistration memberRegistration;
+    private PersonRegistration personRegistration;
 
     @Produces
     @Named
-    private Member newMember;
+    private Person newPerson;
 
     @PostConstruct
-    public void initNewMember() {
-        newMember = new Member();
+    public void initNewPerson() {
+        newPerson = new Person();
     }
 
     public void register() throws Exception {
         try {
-            memberRegistration.register(newMember);
+            personRegistration.register(newPerson);
             FacesMessage m = new FacesMessage(FacesMessage.SEVERITY_INFO, "Registered!", "Registration successful");
             facesContext.addMessage(null, m);
-            initNewMember();
+            initNewPerson();
         } catch (Exception e) {
             String errorMessage = getRootErrorMessage(e);
             FacesMessage m = new FacesMessage(FacesMessage.SEVERITY_ERROR, errorMessage, "Registration unsuccessful");

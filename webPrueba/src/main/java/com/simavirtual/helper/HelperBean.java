@@ -24,14 +24,12 @@ public class HelperBean {
 
         log.info("Please wait while preparing database data ... ");
 
-/*
-        Person p = new Person("James","Rodriguez");
+        Person p = new Person("James","Rodriguez 11");
         em.persist(p);
         em.flush();
-*/
 
         log.info("Database successfully populated ... ");
 
     } // end : populateTest Method
-
+    
 }

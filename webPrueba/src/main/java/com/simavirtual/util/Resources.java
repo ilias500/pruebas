@@ -29,7 +29,7 @@ public class Resources {
 
     @Produces
     public Logger produceLog(InjectionPoint injectionPoint) {
-        return Logger.getLogger(injectionPoint.getMember().getDeclaringClass().getName());
+        return Logger.getLogger(injectionPoint.getPerson().getDeclaringClass().getName());
     }
 
     @Produces
