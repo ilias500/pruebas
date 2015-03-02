@@ -41,6 +41,7 @@
             <groupId>org.jboss.jbossts</groupId>
             <artifactId>jbossjta</artifactId>
         </dependency>
+
         <!-- Hibernate Search -->
         <dependency>
             <groupId>org.hibernate</groupId>
