@@ -22,6 +22,7 @@
 
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
+    <class>com.simavirtual.model.Person</class>
     <class>org.picketlink.quickstart.identitymodel.entity.ApplicationAccessIdentityTypeEntity</class>
     <class>org.picketlink.quickstart.identitymodel.entity.ApplicationAccessTypeEntity</class>
     <class>org.picketlink.quickstart.identitymodel.entity.ApplicationTypeEntity</class>
@@ -42,14 +43,14 @@
     <class>org.picketlink.quickstart.identitymodel.entity.RelationshipIdentityTypeEntity</class>
 
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
-
+    <jta-data-source>java:jboss/datasources/webMongoDS</jta-data-source>
     <properties>
+      <!-- <property name="javax.persistence.jdbc.url"        value="jdbc:h2:/db/repository"/>  -->
+      <!-- <property name="javax.persistence.jdbc.user"       value="sa"/>  -->
+      <!-- <property name="javax.persistence.jdbc.password"   value=""/>  -->
       <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
-      <property name="javax.persistence.jdbc.url"        value="jdbc:h2:mem:picketlink-custom-identity-model"/>
-      <property name="javax.persistence.jdbc.user"       value="sa"/>
-      <property name="javax.persistence.jdbc.password"   value=""/>
       <property name="hibernate.dialect"                 value="org.hibernate.dialect.H2Dialect"/>
-      <property name="hibernate.hbm2ddl.auto"            value="create-drop" />
+      <property name="hibernate.hbm2ddl.auto"            value="update" />
       <property name="hibernate.show_sql"                value="true" />
       <property name="hibernate.format_sql"              value="true"/>
     </properties>

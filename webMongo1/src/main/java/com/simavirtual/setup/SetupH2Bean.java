@@ -23,6 +23,11 @@ public class SetupH2Bean {
     public void populateTest() {
 
         log.info("Please wait while preparing database data H2... ");
+        
+        Person p = new Person("Pedro","Perez");
+
+        em.persist(p);
+        em.flush();
 
         log.info("Database successfully populated H2... ");
 
