@@ -1,0 +1,60 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+  <!-- Use this for MongoDB -->
+  <persistence-unit name="webMongo1PU-JTA" transaction-type="JTA">
+
+    <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+
+    <class>com.simavirtual.model.Person</class>
+    <properties>
+      <property name="hibernate.ogm.datastore.provider"        value="mongodb" />
+      <property name="hibernate.ogm.datastore.database"        value="webMongo1" />
+      <property name="hibernate.ogm.datastore.create_database" value="true" />
+    </properties>
+
+  </persistence-unit>
+
+  <persistence-unit name="picketlink-custom-identity-model-pu">
+
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+    <class>org.picketlink.quickstart.identitymodel.entity.ApplicationAccessIdentityTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.ApplicationAccessTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.ApplicationTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.ApplicationRealmTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.AttributedTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.GrantIdentityTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.GrantTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.GroupMembershipIdentityTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.GroupMembershipTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.GroupTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.RealmTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.RoleTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.UserTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.PasswordCredentialTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.PartitionTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.AbstractIdentityTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.RelationshipTypeEntity</class>
+    <class>org.picketlink.quickstart.identitymodel.entity.RelationshipIdentityTypeEntity</class>
+
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+    <properties>
+      <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+      <property name="javax.persistence.jdbc.url"        value="jdbc:h2:mem:picketlink-custom-identity-model"/>
+      <property name="javax.persistence.jdbc.user"       value="sa"/>
+      <property name="javax.persistence.jdbc.password"   value=""/>
+      <property name="hibernate.dialect"                 value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.hbm2ddl.auto"            value="create-drop" />
+      <property name="hibernate.show_sql"                value="true" />
+      <property name="hibernate.format_sql"              value="true"/>
+    </properties>
+
+  </persistence-unit>
+
+
+</persistence>

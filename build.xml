@@ -30,6 +30,7 @@
     <delete dir="SimpleWeb/target" failonerror="no"/>
     <delete dir="SimpleWebAppEjb/target" failonerror="no"/>
     <delete dir="webMongo/target" failonerror="no"/>
+    <delete dir="webMongo1/target" failonerror="no"/>    
     <delete dir="webPrueba/target" failonerror="no"/>
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSrv/target" failonerror="no"/>
