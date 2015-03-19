@@ -35,6 +35,7 @@
     <delete dir="WsSimaCli/target" failonerror="no"/>
     <delete dir="WsSimaSrv/target" failonerror="no"/>
     <delete dir="WsSimaSvrWeb/target" failonerror="no"/>
+    <delete dir="demo/target" failonerror="no"/>
   </target>
 
   <target name="bak">
