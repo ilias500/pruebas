@@ -14,10 +14,16 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<!-- Plain HTML page that kicks us into the app -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+        >
+<body>
+Welcome to "#{authorizationData.department.name}" as "#{authorizationChecker.roles}", <b>#{identity.account.name}</b> !
 
-<html>
-<head>
-<meta http-equiv="Refresh" content="0; URL=protected/login.jsf">
-</head>
+<p>
+    <h:form>
+        <h:commandButton id="logout" value="Log out" action="#{loginController.logout}"/>
+    </h:form>
+</p>
+</body>
 </html>
